@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collation = "products")
+@Document(collection = "products")
 public class Product {
     @Id
     private String id;
