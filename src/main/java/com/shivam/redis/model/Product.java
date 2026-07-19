@@ -1,5 +1,7 @@
 package com.shivam.redis.model;
 
+import java.io.Serializable;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,7 +17,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @Document(collection = "products")
-public class Product {
+public class Product implements Serializable {
+    private static final long serialVersionUID = 1L;
     @Id
     private String id;
 
